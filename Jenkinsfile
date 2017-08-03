@@ -1,11 +1,15 @@
 import groovy.json.JsonSlurper
-def inputFile = new File("properties")
-InputJSON = new JsonSlurper().parseText(inputFile.text)
+
+param(){
+    def inputFile = new File("properties")
+    InputJSON = new JsonSlurper().parseText(inputFile.text)
+    InputJSON.each{ println it }
+}
 node{
     stage("Preparation"){
       checkout scm
     }
     stage("Load properties"){
-      InputJSON.each{ println it }
+      param()
     }      
 }
