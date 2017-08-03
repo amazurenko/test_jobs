@@ -1,8 +1,8 @@
 {
-  sonarProperties : {
-      projectKey: "mtp:demo",
-      projectName: "MTP-demo",
-      projectVersion: '1.0',
-      sources: 'channelorder-esstub/src/main'    
+  "sonarProperties" : {
+      "projectKey": "mtp:demo",
+      "projectName": "MTP-demo",
+      "projectVersion": '1.0',
+      "source"s: 'channelorder-esstub/src/main'    
   }
 }
