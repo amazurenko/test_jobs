@@ -2,13 +2,14 @@ import groovy.json.JsonSlurper
 
 @NonCPS
 def param(){
-    def inputFile = new File("${WORKSPACE}/properties")
-   // InputJSON = new JsonSlurper().parseText(inputFile.text)
-    //InputJSON.each{ println it }
-        def game = inputFile.withReader { r ->
+    def properties = new File("${WORKSPACE}/properties").withReader { r ->
         new JsonSlurper().parse( r )
     }
-    println game
+    
+    
+    println properties
+    println properties.sonarProperties.projectKey
+    
 }
 
 node{
