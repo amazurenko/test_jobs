@@ -3,6 +3,6 @@
       "projectKey": "mtp:demo",
       "projectName": "MTP-demo",
       "projectVersion": "1.0",
-      "source"s: "channelorder-esstub/src/main"
+      "sources": "channelorder-esstub/src/main"
   }
 }
