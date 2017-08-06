@@ -1,20 +1,4 @@
-import groovy.json.JsonSlurper
-
-@NonCPS
 def param(){
-    def p = new File("${WORKSPACE}/properties").withReader { r ->
-        new JsonSlurper().parse( r )
-    }
-    
-    
-    println "All properties: " + p
-    println "SonarProjectKey = " + p.sonarProperties.projectKey
-    println "applicationName = " + p.applicationName
-    println "tillerNamespace = " + p.tillerNamespace
-
-}
-
-def param2(){
     def p = load("${WORKSPACE}/gproerties")
     
     println "All properties2: " + p
@@ -31,7 +15,7 @@ node{
     }
     stage("Load properties"){
       getBuildParameters()
-      param()
+      gitPRChecker(getLastCommit(-1))
       param2()
     }      
 }
