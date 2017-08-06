@@ -17,7 +17,7 @@ node{
       getBuildParameters()
          withCredentials([string(credentialsId: 'jenkins-coreci-secrettoken', variable: 'creds')]) {
             def scmUrl = scm.getUserRemoteConfigs()[0].getUrl().split('/')
-            gitPRChecker(creds, scmUrl[3], scmUrl, getLastCommit(-1))    
+            gitPRChecker("${creds}", scmUrl[3], scmUrl, getLastCommit(-1))    
         }       
         
       
