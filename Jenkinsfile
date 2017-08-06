@@ -2,14 +2,16 @@ import groovy.json.JsonSlurper
 
 @NonCPS
 def param(){
-    def properties = new File("${WORKSPACE}/properties").withReader { r ->
+    def p = new File("${WORKSPACE}/properties").withReader { r ->
         new JsonSlurper().parse( r )
     }
     
     
-    println properties
-    println properties.sonarProperties.projectKey
-    
+    println "All properties: " + p
+    println "SonarProjectKey = " + p.sonarProperties.projectKey
+    println "applicationName = " + p.applicationName
+    println "tillerNamespace = " + p.tillerNamespace
+
 }
 
 node{
