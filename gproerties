@@ -3,8 +3,8 @@
   tillerNamespace: 'epam',
 
   sonarProperties: [
-      projectKey: "${p.applicationName}:${env.BRANCH_NAME}",
-      projectName: "${p.applicationName}-${env.BRANCH_NAME}",
+      projectKey: "mtp-channelorder-esstub:${env.BRANCH_NAME}",
+      projectName: "mtp-channelorder-esstub-${env.BRANCH_NAME}",
       projectVersion: '1.0',
       sources: 'channelorder-esstub/src/main'
   ]
