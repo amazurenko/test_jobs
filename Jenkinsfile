@@ -16,8 +16,6 @@ def param(){
 
 def param2(){
     def p = load("${WORKSPACE}/gproperties")
-    }
-    
     
     println "All properties2: " + p
     println "SonarProjectKey2 = " + p.sonarProperties.projectKey
