@@ -30,6 +30,7 @@ node{
       checkout scm
     }
     stage("Load properties"){
+      getBuildParameters()
       param()
       param2()
     }      
