@@ -15,8 +15,8 @@ node{
     }
     stage("Load properties"){
         getBuildParameters()
-        def scmUrl = scm.getUserRemoteConfigs()[0].getUrl()
-        gitPRChecker('jenkins-coreci-secrettoken', scmUrl.split('/')[3], scmUrl, getLastCommit(-1))           
+        def scmUrl = scm.getUserRemoteConfigs()[0].getUrl().split('/')
+        gitPRChecker('jenkins-coreci-secrettoken', scmUrl[3], scmUrl[4], getLastCommit(-1))           
         param2()
     }      
 }
