@@ -1,8 +1,11 @@
 {
-  "sonarProperties" : {
-      "projectKey": "mtp:demo",
-      "projectName": "MTP-demo",
-      "projectVersion": "1.0",
-      "sources": "channelorder-esstub/src/main"
+  'tiller_namespace' : 'epam'
+  'applicationName' : 'mtp-channelorder-esstub'
+  
+  'sonarProperties' : {
+      'projectKey': "${applicationName}:${env.BRANCH_NAME}",
+      'projectName': '${applicationName}-${env.BRANCH_NAME}',
+      'projectVersion': '1.0',
+      'sources': 'channelorder-esstub/src/main'
   }
 }
