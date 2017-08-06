@@ -3,8 +3,8 @@
   "tillerNamespace" : "epam",
 
   "sonarProperties" : {
-      "projectKey": "${applicationName}:${env.BRANCH_NAME}",
-      "projectName": "${applicationName}-${env.BRANCH_NAME}",
+      "projectKey": "${p.applicationName}:${env.BRANCH_NAME}",
+      "projectName": "${p.applicationName}-${env.BRANCH_NAME}",
       "projectVersion": "1.0",
       "sources": "channelorder-esstub/src/main"
   }
