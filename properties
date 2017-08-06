@@ -1,6 +1,6 @@
 {
   'applicationName' : 'mtp-channelorder-esstub',
-  'tiller_namespace' : 'epam',
+  'tillerNamespace' : 'epam',
 
   'sonarProperties' : {
       'projectKey': "${applicationName}:${env.BRANCH_NAME}",
